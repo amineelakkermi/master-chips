@@ -486,7 +486,7 @@ export default function HeroAbout() {
               <span className="h-px w-8 bg-[#E8B84B]/50" />
             </div>
             <h2 className="font-paprika text-[clamp(2.5rem,7vw,5rem)] leading-tight text-white">
-              Our Products
+              Our <span className="text-[#E8B84B]">Products</span>
             </h2>
           </div>
 
@@ -501,7 +501,8 @@ export default function HeroAbout() {
                   key={i}
                   onMouseEnter={onEnter}
                   onMouseLeave={onLeave}
-                  className="cursor-pointer min-w-full sm:min-w-[85%] lg:min-w-[58%]"
+                  className="cursor-pointer min-w-full sm:min-w-[85%] lg:min-w-[58%]
+                  "
                 >
                   <div
                     className="relative rounded-3xl overflow-hidden border border-white/[0.07] flex flex-col md:flex-row min-h-[400px]"
@@ -532,7 +533,7 @@ export default function HeroAbout() {
                         ref={i === 0 ? firstCardImageRef : null}
                         src={image}
                         alt={name}
-                        className="w-[160px] md:w-[210px] transition-transform duration-700 hover:scale-105"
+                        className="w-[160px] md:w-[210px] mt-10 md:mt-0 transition-transform duration-700 hover:scale-105"
                         style={i === 0 ? { opacity: 0 } : undefined}
                       />
                     </div>
