@@ -44,8 +44,8 @@
 
 /* ===== Firefox ===== */
 * {
-  scrollbar-width: thin;                 /* thin | auto */
-  scrollbar-color: #E8B84B #0B1E2D;     /* thumb + track */
+  scrollbar-width: thin;              
+  scrollbar-color: #E8B84B #0B1E2D;
 }
 
 /* Global Styles */
@@ -56,6 +56,7 @@ html {
 body{
   font-family: var(--font-paprika);
   background: var(--color-main-blue);
+  overflow-x: hidden;
 }
 
 button{
