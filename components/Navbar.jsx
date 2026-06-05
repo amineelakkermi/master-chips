@@ -23,10 +23,7 @@ export default function Navbar() {
       name: "Products",
       href: "#",
     },
-    {
-      name: "Gallery",
-      href: "#",
-    },
+   
   ];
 
   return (

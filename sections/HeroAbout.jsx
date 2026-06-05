@@ -190,24 +190,35 @@ export default function HeroAbout() {
          Couvre la deuxième moitié de la section About.
          scrub: 1 plus réactif pour que le fade semble instantané.
       ──────────────────────────────────────────────────────────────── */
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: aboutRef.current,
-          start: "center top",
-          end: "bottom top",
-          scrub: 1,
-          invalidateOnRefresh: true,
-        },
-      })
-      .to(productRef.current, {
-        opacity: 0,
-        ease: "none",
-      })
-      .to(firstCardImageRef.current, {
-        opacity: 1,
-        duration: 0,
-        ease: "none",
-      }, "<");
+     /* ─── ABOUT → PRODUCTS : Phase 2 — crossfade chip ↔ carte ─────── */
+gsap.timeline({
+  scrollTrigger: {
+    trigger: aboutRef.current,
+    start: "center top",
+    end: "bottom top",
+    scrub: 1,
+    invalidateOnRefresh: true,
+    onUpdate(self) {
+      // Le chip disparaît sur toute la phase
+      // La carte n'apparaît qu'à partir de 85% de progression
+      const cardOpacity = Math.max(0, (self.progress - 0.85) / 0.15);
+      if (firstCardImageRef.current) {
+        gsap.set(firstCardImageRef.current, { opacity: cardOpacity });
+      }
+    },
+    onLeaveBack() {
+      // Si on scroll vers le haut, on remet la carte invisible
+      if (firstCardImageRef.current) {
+        gsap.set(firstCardImageRef.current, { opacity: 0 });
+      }
+    },
+  },
+})
+.to(productRef.current, {
+  opacity: 0,
+  ease: "none",
+});
+      
 
       /* ─── HORIZONTAL CAROUSEL ─── */
       const el        = productCardRef.current;
