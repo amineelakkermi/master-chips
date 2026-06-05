@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Paprika&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import "tailwindcss";
+
+/* Theme */
+@theme {
+  /* Colors */
+  --color-main-blue: #327fa2;
+  --color-main-yellow: #c0c001;
+
+  --color-gray-light: #cacaca;
+  --color-gray-dark: #5f5e5e;
+
+  /* Fonts */
+  --font-poppins: "Poppins", sans-serif;
+  --font-paprika: "Paprika", cursive;
+}
+
+
+/* Global Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: var(--font-paprika);
+  background: var(--color-main-blue);
+}
+
+button{
+  cursor: pointer;
+}
+
+*, *::before, *::after {
+  cursor: none !important;
+}
