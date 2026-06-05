@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 
 import masterChips from "../public/masterChips.png";
+import masterChips1 from "../public/masterChips1.png";
 import masterChips2 from "../public/masterChips2.png";
 import masterChips3 from "../public/masterChips3.png";
 import masterChips4 from "../public/masterChips4.png";
@@ -18,7 +19,7 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 ───────────────────────────────────────────── */
 const PRODUCTS = [
   {
-    image: masterChips,
+    image: masterChips1,
     name: "Cheese Flavoured",
     tagline: "The classic that started it all.",
     desc: "Perfectly seasoned, golden-fried to a satisfying crunch. Algeria's favourite since day one.",
