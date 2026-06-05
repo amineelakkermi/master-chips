@@ -17,6 +17,37 @@
 }
 
 
+
+/* ===== Scrollbar global ===== */
+::-webkit-scrollbar {
+  width: 10px;              /* largeur du scrollbar vertical */
+  height: 10px;             /* hauteur du scrollbar horizontal */
+}
+
+/* Fond du scrollbar */
+::-webkit-scrollbar-track {
+  background: #0B1E2D;      /* couleur du fond */
+  border-radius: 10px;
+}
+
+/* Le “thumb” (la barre qui bouge) */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #E8B84B, #c99a2e);
+  border-radius: 10px;
+  border: 2px solid #0B1E2D; /* effet de séparation */
+}
+
+/* Hover sur le thumb */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ffd56a, #E8B84B);
+}
+
+/* ===== Firefox ===== */
+* {
+  scrollbar-width: thin;                 /* thin | auto */
+  scrollbar-color: #E8B84B #0B1E2D;     /* thumb + track */
+}
+
 /* Global Styles */
 html {
   scroll-behavior: smooth;
@@ -33,4 +64,5 @@ button{
 
 *, *::before, *::after {
   cursor: none !important;
+
 }
